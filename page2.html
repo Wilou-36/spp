@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Groupe Élite — SPP Solidarity</title>
+<meta name="description" content="Protocole d'entraînement du Groupe Élite SPP : enquêter, cibler, opérer. Planning hebdomadaire et accompagnement pluridisciplinaire.">
+<link rel="icon" href="img/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="spp.css">
+</head>
+<body>
+
+<canvas id="hero-canvas"></canvas>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="index.html">
+    <img src="LOGO_PLACEHOLDER" alt="SPP" class="nav-logo-img">
+    <div class="nav-brand-text">
+      <strong>SPP SOLIDARITY</strong>
+      <span>Sport Pro Performance</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="page2.html">Groupe Élite</a></li>
+    <li><a href="page3.html">Pôle CNED</a></li>
+    <li><a href="page4.html">Partenaires</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-ctas">
+    <button id="theme-toggle" title="Basculer thème" aria-label="Toggle theme"></button>
+    <a href="off.html" class="btn btn-ghost">S'inscrire</a>
+    <a href="off.html" class="btn btn-cta">Se connecter</a>
+  </div>
+</nav>
+
+<!-- PROTOCOL -->
+<section class="protocol">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-meta">
+        <div class="section-meta-line"></div>
+        <span class="section-meta-label">Méthodologie</span>
+      </div>
+      <h2 class="section-title">Notre <em>protocole</em></h2>
+    </div>
+    <div class="protocol-steps">
+      <div class="pstep reveal">
+        <div class="pstep-bg-num">01</div>
+        <div class="pstep-icon">🔍</div>
+        <h3>Enquêter</h3>
+        <p>Évaluer l'état actuel de la performance — bilan physique, mental, tactique et professionnel de chaque athlète.</p>
+        <div class="pstep-stripe"></div>
+      </div>
+      <div class="pstep reveal" style="transition-delay:.1s">
+        <div class="pstep-bg-num">02</div>
+        <div class="pstep-icon">🎯</div>
+        <h3>Cibler</h3>
+        <p>Fixer un objectif réaliste et ambitieux, aligné avec le potentiel et les aspirations de l'athlète.</p>
+        <div class="pstep-stripe"></div>
+      </div>
+      <div class="pstep reveal" style="transition-delay:.2s">
+        <div class="pstep-bg-num">03</div>
+        <div class="pstep-icon">🚀</div>
+        <h3>Opérer</h3>
+        <p>Accompagner le sportif jusqu'au haut niveau avec un suivi individualisé et pluridisciplinaire.</p>
+        <div class="pstep-stripe"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="grad-divider"></div>
+
+
+
+<!-- PLANNING -->
+<section class="planning">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-meta">
+        <div class="section-meta-line"></div>
+        <span class="section-meta-label">Planning</span>
+      </div>
+      <h2 class="section-title">Emploi du <em>temps</em></h2>
+    </div>
+    <div class="week-grid reveal">
+      <div class="day">
+        <div class="day-head">Lundi</div>
+        <div class="day-slots">
+          <div class="slot">📚 CNED encadré (3h)</div>
+          <div class="slot s">⚽ Technico-tactique (2h)</div>
+          <div class="slot m">📖 Étude / soutien</div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-head">Mardi</div>
+        <div class="day-slots">
+          <div class="slot">📚 CNED indiv. (2h)</div>
+          <div class="slot s">💪 Prépa physique + Tactique (2h)</div>
+          <div class="slot m">🧠 Coaching mental (1h)</div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-head">Mercredi</div>
+        <div class="day-slots">
+          <div class="slot">📚 CNED encadré (2h)</div>
+          <div class="slot s">🏟️ Match interne (2h)</div>
+          <div class="slot r">😴 Récupération</div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-head">Jeudi</div>
+        <div class="day-slots">
+          <div class="slot">📚 CNED indiv. (3h)</div>
+          <div class="slot s">🎬 Entraîn. intensif + vidéo (2h)</div>
+          <div class="slot m">🔭 Découverte métier (1h)</div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-head">Vendredi</div>
+        <div class="day-slots">
+          <div class="slot">📚 CNED encadré (2h)</div>
+          <div class="slot s">💪 Prépa + Ateliers (2h)</div>
+          <div class="slot m">📊 Bilan individuel (1h)</div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-head">Samedi</div>
+        <div class="day-slots">
+          <div class="slot s">🏆 Match / Tournoi</div>
+          <div class="slot r">🧘 Récupération active</div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-head">Dimanche</div>
+        <div class="day-slots">
+          <div class="slot r">😴 Repos / Travail perso</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="grad-divider"></div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="reveal">
+      <div class="section-meta" style="justify-content:center">
+        <div class="section-meta-line"></div>
+        <span class="section-meta-label">Contact</span>
+        <div class="section-meta-line" style="background:linear-gradient(to left, transparent, var(--orange))"></div>
+      </div>
+      <h2 class="section-title">Nous <em>contacter</em></h2>
+      <p>Rejoignez le programme SPP ou posez-nous vos questions.</p>
+    </div>
+    <div class="form-grid reveal">
+      <div class="fg"><label>Nom</label><input type="text" placeholder="Dupont"></div>
+      <div class="fg"><label>Prénom</label><input type="text" placeholder="Jean"></div>
+      <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.com"></div>
+      <div class="fg"><label>Objet</label><input type="text" placeholder="Inscription Pôle CNED"></div>
+      <div class="fg full"><label>Message</label><textarea placeholder="Décrivez votre projet ou votre demande..."></textarea></div>
+      <div class="full"><button class="btn-submit" id="submitBtn">Envoyer le message →</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <img src="LOGO_PLACEHOLDER" alt="SPP" class="footer-logo-img">
+    <span class="footer-brand">SPP SOLIDARITY</span>
+  </div>
+  <div class="footer-right">Sport Pro Performance · Tous droits réservés © 2026</div>
+</footer>
+<script src="spp.js"></script>
+</body>
+</html>

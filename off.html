@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application bientôt disponible — SPP Solidarity</title>
+<link rel="icon" href="img/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="spp.css">
+<style>
+  .off-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  .off-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4rem 3.5rem;
+    text-align: center;
+    max-width: 520px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .off-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--grad);
+  }
+  .off-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  .off-card h1 {
+    font-family: var(--font-head);
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: .06em;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .off-card p {
+    color: var(--muted);
+    font-size: .95rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+  .off-loader {
+    width: 36px; height: 36px;
+    border: 3px solid var(--border);
+    border-top-color: var(--orange);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 2.5rem;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  .off-tag {
+    font-family: var(--font-mono);
+    font-size: .58rem;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+</style>
+</head>
+<body>
+<canvas id="hero-canvas"></canvas>
+
+<div class="off-wrap">
+  <div class="off-card">
+    <span class="off-tag">// En développement</span>
+    <span class="off-icon">⚙️</span>
+    <h1>Bientôt disponible</h1>
+    <p>L'application SPP est actuellement en cours de développement.<br>Elle sera disponible très prochainement.</p>
+    <div class="off-loader"></div>
+    <a href="index.html#contact" class="btn btn-cta" style="font-size:.8rem;padding:.75rem 2rem">
+      ← Nous contacter
+    </a>
+  </div>
+</div>
+
+<script src="spp.js"></script>
+</body>
+</html>
