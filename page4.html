@@ -9,6 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="spp.css">
+<script>
+(function(){var t=localStorage.getItem('spp-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='light'||(t===null&&!d))document.documentElement.classList.add('light');})();
+</script>
 </head>
 <body>
 <canvas id="hero-canvas"></canvas>
@@ -23,16 +26,16 @@
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="page2.html">Groupe Élite</a></li>
-    <li><a href="page3.html">Pôle CNED</a></li>
-    <li><a href="page4.html">Partenaires</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+    <li><a href="page2.html" data-i18n="nav_elite">Groupe Élite</a></li>
+    <li><a href="page3.html" data-i18n="nav_cned">Pôle CNED</a></li>
+    <li><a href="page4.html" data-i18n="nav_partners">Partenaires</a></li>
+    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
   </ul>
   <div class="nav-ctas">
     <button id="theme-toggle" title="Basculer thème" aria-label="Toggle theme"></button>
-    <a href="off.html" class="btn btn-ghost">S'inscrire</a>
-    <a href="off.html" class="btn btn-cta">Se connecter</a>
+    <a href="off.html" class="btn btn-ghost" data-i18n="nav_register">S'inscrire</a>
+    <a href="off.html" class="btn btn-cta" data-i18n="nav_login">Se connecter</a>
   </div>
 </nav>
 
@@ -41,12 +44,12 @@
   <div class="wrap">
     <div class="section-meta" style="justify-content:center;margin-bottom:1.5rem">
       <div class="section-meta-line"></div>
-      <span class="section-meta-label">Partenariats</span>
+      <span class="section-meta-label" data-i18n="hero_meta">Partenariats</span>
       <div class="section-meta-line" style="background:linear-gradient(to left,transparent,var(--orange))"></div>
     </div>
-    <h1>Devenir <em>partenaire</em></h1>
-    <p>Associez votre image à un programme d'excellence sportive et humaine.</p>
-    <a href="#contact" class="btn btn-cta" style="margin-top:2rem;display:inline-block">Nous rejoindre</a>
+    <h1 data-i18n="hero_title">Devenir <em>partenaire</em></h1>
+    <p data-i18n="hero_sub">Associez votre image à un programme d'excellence sportive et humaine.</p>
+    <a href="#contact" class="btn btn-cta" style="margin-top:2rem;display:inline-block" data-i18n="hero_cta">Nous rejoindre</a>
   </div>
 </section>
 
@@ -58,51 +61,30 @@
     <div class="reveal">
       <div class="section-meta">
         <div class="section-meta-line"></div>
-        <span class="section-meta-label">Nos atouts</span>
+        <span class="section-meta-label" data-i18n="why_meta">Nos atouts</span>
       </div>
-      <h2 class="section-title">Pourquoi <em>nous</em></h2>
+      <h2 class="section-title" data-i18n="why_title">Pourquoi <em>nous</em></h2>
     </div>
-    <div class="grid-3">
-      <div class="reveal">
-        <h3>🎯 Visibilité</h3>
-        <p>Exposez votre marque dans un environnement sportif premium.</p>
+    <div class="why-grid reveal">
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h3 data-i18n="why1_h">Visibilité</h3>
+        <p data-i18n="why1_p">Logo, mentions et présence digitale sur tous nos canaux de communication. Exposez votre marque dans un environnement sportif premium.</p>
       </div>
-      <div class="reveal" style="transition-delay:.1s">
-        <h3>🤝 Réseau</h3>
-        <p>Accédez à un réseau d'athlètes, coachs et structures.</p>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <h3 data-i18n="why2_h">Réseau</h3>
+        <p data-i18n="why2_p">Accédez à un réseau d'athlètes, coachs et structures. Rencontres, événements et mise en relation directe avec nos talents.</p>
       </div>
-      <div class="reveal" style="transition-delay:.2s">
-        <h3>🚀 Impact</h3>
-        <p>Participez à la réussite de jeunes talents.</p>
+      <div class="why-card">
+        <div class="why-icon">🚀</div>
+        <h3 data-i18n="why3_h">Impact</h3>
+        <p data-i18n="why3_p">Participez activement à la réussite de jeunes talents. Associez votre marque aux valeurs de performance, solidarité et excellence.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<div class="grad-divider"></div>
-
-<!-- TYPES -->
-<section class="partners-types">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="section-meta">
-        <div class="section-meta-line"></div>
-        <span class="section-meta-label">Profils</span>
-      </div>
-      <h2 class="section-title">Nos <em>partenaires</em></h2>
-    </div>
-    <div class="grid-3">
-      <div class="reveal">
-        <h3>🏟️ Clubs</h3>
-        <p>Détection et développement de talents.</p>
-      </div>
-      <div class="reveal" style="transition-delay:.1s">
-        <h3>🎓 Écoles</h3>
-        <p>Accompagnement scolaire structuré.</p>
-      </div>
-      <div class="reveal" style="transition-delay:.2s">
-        <h3>💼 Sponsors</h3>
-        <p>Visibilité et image de marque.</p>
+      <div class="why-card">
+        <div class="why-icon">📈</div>
+        <h3 data-i18n="why4_h">Stratégie RSE</h3>
+        <p data-i18n="why4_p">Partenariat co-construit, mesurable et aligné avec vos objectifs RSE. Une collaboration à fort impact, engagée sur le long terme.</p>
       </div>
     </div>
   </div>
@@ -110,117 +92,108 @@
 
 <div class="grad-divider"></div>
 
-<!-- BENEFITS -->
-<section class="benefits">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="section-meta">
-        <div class="section-meta-line"></div>
-        <span class="section-meta-label">Avantages</span>
-      </div>
-      <h2 class="section-title">Vos <em>bénéfices</em></h2>
-    </div>
-    <div class="dda-pillars reveal" style="margin-top:3rem">
-      <div class="pillar">
-        <div class="pillar-letter">✔</div>
-        <div class="pillar-body">
-          <h3>Visibilité sur nos supports</h3>
-          <p>Logo, mentions et présence digitale sur tous nos canaux de communication.</p>
-        </div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-letter">✔</div>
-        <div class="pillar-body">
-          <h3>Image premium et engagée</h3>
-          <p>Associez votre marque aux valeurs de performance, solidarité et excellence.</p>
-        </div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-letter">✔</div>
-        <div class="pillar-body">
-          <h3>Accès à des talents sportifs</h3>
-          <p>Rencontres, événements, détection et mise en relation avec nos athlètes.</p>
-        </div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-letter">✔</div>
-        <div class="pillar-body">
-          <h3>Collaboration stratégique</h3>
-          <p>Partenariat co-construit, mesurable et aligné avec vos objectifs RSE.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<div class="grad-divider"></div>
-
-<!-- STATS -->
-<section class="stats">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="section-meta">
-        <div class="section-meta-line"></div>
-        <span class="section-meta-label">Chiffres clés</span>
-      </div>
-      <h2 class="section-title">SPP en <em>chiffres</em></h2>
-    </div>
-    <div class="hero-kpis reveal" style="margin-top:3rem;justify-content:center;gap:5rem">
-      <div class="kpi">
-        <div class="kpi-n" data-count="50" data-prefix="+">0</div>
-        <div class="kpi-l">Athlètes</div>
-      </div>
-      <div class="kpi-sep"></div>
-      <div class="kpi">
-        <div class="kpi-n" data-count="90" data-suffix="%">0</div>
-        <div class="kpi-l">Progression</div>
-      </div>
-      <div class="kpi-sep"></div>
-      <div class="kpi">
-        <div class="kpi-n" data-count="10" data-suffix="+">0</div>
-        <div class="kpi-l">Partenaires</div>
-      </div>
-      <div class="kpi-sep"></div>
-      <div class="kpi">
-        <div class="kpi-n" data-count="100" data-suffix="%">0</div>
-        <div class="kpi-l">Suivi individuel</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="grad-divider"></div>
-
-<!-- LOGOS -->
-<section class="partners-logos">
+<!-- PARTENAIRES GRID -->
+<section class="partners-showcase">
   <div class="wrap">
     <div class="reveal">
       <div class="section-meta" style="justify-content:center">
         <div class="section-meta-line"></div>
-        <span class="section-meta-label">Ils nous font confiance</span>
+        <span class="section-meta-label" data-i18n="partners_meta">Ils nous font confiance</span>
         <div class="section-meta-line" style="background:linear-gradient(to left,transparent,var(--orange))"></div>
       </div>
-      <h2 class="section-title" style="text-align:center">Ils nous font <em>confiance</em></h2>
+      <h2 class="section-title" style="text-align:center" data-i18n="partners_title">Nos <em>partenaires</em></h2>
     </div>
-    <div class="logos reveal">
-      <a href="https://www.sciences-service.com" target="_blank" rel="noopener">
-        <img src="img/part1.png" alt="Sciences Service">
-      </a>
-      <a href="https://ifepsa.uco.fr/fr" target="_blank" rel="noopener">
-        <img src="img/part3.png" alt="IFEPSA">
-      </a>
-      <a href="https://assoapart.com" target="_blank" rel="noopener">
-        <img src="img/part5.png" alt="Asso Apart">
-      </a>
-      <a href="https://fr.uefa.com/" target="_blank" rel="noopener">
-        <img src="img/part9.png" alt="UEFA">
-      </a>
-      <a href="https://initiatives.asso.fr/" target="_blank" rel="noopener">
-        <img src="img/part8.png" alt="Initiatives Asso">
-      </a>
-      <img src="img/part2.png" alt="Partenaire SPP">
-      <img src="img/part4.png" alt="Partenaire SPP">
-      <img src="img/part6.png" alt="Partenaire SPP">
+    <div class="partners-grid reveal">
+
+      <div class="partner-card">
+        <div class="partner-logo-wrap">
+          <img src="img/part1.png" alt="Sciences Service">
+        </div>
+        <div class="partner-info">
+          <h3>Sciences Service</h3>
+          <p data-i18n="part1_desc">Accompagnement scientifique et technologique au service de la performance sportive et du bien-être des athlètes.</p>
+          <a href="https://www.sciences-service.com" target="_blank" rel="noopener" class="partner-link" data-i18n="visit_link">Visiter le site →</a>
+        </div>
+      </div>
+
+      <div class="partner-card">
+        <div class="partner-logo-wrap">
+          <img src="img/part3.png" alt="IFEPSA">
+        </div>
+        <div class="partner-info">
+          <h3>IFEPSA-UCO</h3>
+          <p data-i18n="part3_desc">Institut de formation en éducation physique et sport, associé à l'Université Catholique de l'Ouest, pour la double carrière athlète-étudiant.</p>
+          <a href="https://ifepsa.uco.fr/fr" target="_blank" rel="noopener" class="partner-link" data-i18n="visit_link">Visiter le site →</a>
+        </div>
+      </div>
+
+      <div class="partner-card">
+        <div class="partner-logo-wrap">
+          <img src="img/part5.png" alt="Asso Apart">
+        </div>
+        <div class="partner-info">
+          <h3>Asso Apart</h3>
+          <p data-i18n="part5_desc">Association dédiée à l'accompagnement des sportifs dans leur transition professionnelle et leur insertion sociale.</p>
+          <a href="https://assoapart.com" target="_blank" rel="noopener" class="partner-link" data-i18n="visit_link">Visiter le site →</a>
+        </div>
+      </div>
+
+      <div class="partner-card">
+        <div class="partner-logo-wrap">
+          <img src="img/part9.png" alt="UEFA">
+        </div>
+        <div class="partner-info">
+          <h3>UEFA</h3>
+          <p data-i18n="part9_desc">Union des associations européennes de football — organisme référent pour le développement du football de haut niveau en Europe.</p>
+          <a href="https://fr.uefa.com/" target="_blank" rel="noopener" class="partner-link" data-i18n="visit_link">Visiter le site →</a>
+        </div>
+      </div>
+
+      <div class="partner-card">
+        <div class="partner-logo-wrap">
+          <img src="img/part8.png" alt="Initiatives Asso">
+        </div>
+        <div class="partner-info">
+          <h3>Initiatives Asso</h3>
+          <p data-i18n="part8_desc">Plateforme nationale de financement participatif dédié aux associations et projets à fort impact social et solidaire.</p>
+          <a href="https://initiatives.asso.fr/" target="_blank" rel="noopener" class="partner-link" data-i18n="visit_link">Visiter le site →</a>
+        </div>
+      </div>
+
+      <div class="partner-card">
+        <div class="partner-logo-wrap">
+          <img src="img/part2.png" alt="Initiatives Asso">
+        </div>
+        <div class="partner-info">
+          <h3>ASSOCIATION ALBICELESTE</h3>
+          <p data-i18n="part8_desc">Une association rennaise qui mène des actions socio-éducatives, culturelles et sportives pour accompagner les jeunes et promouvoir la solidarité et la lutte contre les discriminations.</p>
+          <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/albiceleste-35-800500589" target="_blank" rel="noopener" class="partner-link" data-i18n="visit_link">En savoir plus →</a>
+        </div>
+      </div>
+
+      <div class="partner-card">
+        <div class="partner-logo-wrap">
+          <img src="img/part4.png" alt="Initiatives Asso">
+        </div>
+        <div class="partner-info">
+          <h3>SPP Solidarity</h3>
+          <p data-i18n="part8_desc">Plateforme accès sur la relation avec les entreprises.</p>
+          <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/sports-pro-performance-solidarity-888916913" target="_blank" rel="noopener" class="partner-link" data-i18n="visit_link">En savoir plus →</a>
+        </div>
+      </div>
+
+      <div class="partner-card">
+        <div class="partner-logo-wrap">
+          <img src="img/part6.png" alt="Initiatives Asso">
+        </div>
+        <div class="partner-info">
+          <h3>ERTS ARDEQAF</h3>
+          <p data-i18n="part8_desc">L’ARDEQAF est une association qui développe des actions de formation et d’accompagnement professionnel, notamment dans les secteurs social, sanitaire et médico-social, afin de favoriser l’insertion et l’évolution des compétences.</p>
+          <a href="https://www.erts-olivet.org/lassociation-gestionnaire-ardeqaf/" target="_blank" rel="noopener" class="partner-link" data-i18n="visit_link">Visiter le site →</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -233,24 +206,24 @@
     <div class="reveal">
       <div class="section-meta" style="justify-content:center">
         <div class="section-meta-line"></div>
-        <span class="section-meta-label">Contact</span>
+        <span class="section-meta-label" data-i18n="contact_meta">Contact</span>
         <div class="section-meta-line" style="background:linear-gradient(to left, transparent, var(--orange))"></div>
       </div>
-      <h2 class="section-title">Nous <em>contacter</em></h2>
-      <p>Vous souhaitez devenir partenaire ? Parlons-en.</p>
+      <h2 class="section-title" data-i18n="contact_title">Nous <em>contacter</em></h2>
+      <p data-i18n="contact_sub">Vous souhaitez devenir partenaire ? Parlons-en.</p>
     </div>
     <div class="form-grid reveal">
-      <div class="fg"><label>Nom</label><input type="text" placeholder="Dupont"></div>
-      <div class="fg"><label>Entreprise</label><input type="text" placeholder="Ma société"></div>
+      <div class="fg"><label data-i18n="form_name">Nom</label><input type="text" placeholder="Dupont" data-i18n-ph="form_name_ph"></div>
+      <div class="fg"><label data-i18n="form_company">Entreprise</label><input type="text" placeholder="Ma société" data-i18n-ph="form_company_ph"></div>
       <div class="fg full"><label>Email</label><input type="email" placeholder="contact@entreprise.com"></div>
-      <div class="fg full"><label>Message</label><textarea placeholder="Décrivez votre projet de partenariat..."></textarea></div>
-      <div class="full"><button class="btn-submit" id="submitBtn">Envoyer le message →</button></div>
+      <div class="fg full"><label data-i18n="form_msg">Message</label><textarea placeholder="Décrivez votre projet de partenariat..." data-i18n-ph="form_msg_ph"></textarea></div>
+      <div class="full"><button class="btn-submit" id="submitBtn" data-i18n="form_send">Envoyer le message →</button></div>
     </div>
   </div>
 </section>
 
 <!-- CTA FIXE -->
-<a href="#contact" class="floating-cta">Devenir partenaire</a>
+<a href="#contact" class="floating-cta" data-i18n="floating_cta">Devenir partenaire</a>
 
 <!-- FOOTER -->
 <footer>
@@ -258,9 +231,32 @@
     <img src="LOGO_PLACEHOLDER" alt="SPP" class="footer-logo-img">
     <span class="footer-brand">SPP SOLIDARITY</span>
   </div>
-  <div class="footer-right">Sport Pro Performance · Tous droits réservés © 2026</div>
+
+  <div class="footer-social">
+    <a href="https://www.facebook.com/sportsproperformance/?locale=fr_FR" target="_blank" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12H17l-.4 3h-2.7v7A10 10 0 0 0 22 12"/>
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/sports_pro_performance/" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 
+        0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 
+        5.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 
+        7.2zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 
+        12 9.2zm5.3-2.3a1.1 1.1 0 1 1-1.1 1.1 
+        1.1 1.1 0 0 1 1.1-1.1z"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="footer-right" data-i18n="footer_rights">
+    Sport Pro Performance · Tous droits réservés © 2026
+  </div>
 </footer>
 
 <script src="spp.js"></script>
+
+</script>
 </body>
 </html>
